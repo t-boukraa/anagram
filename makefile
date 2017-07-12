@@ -1,14 +1,14 @@
 CC=gcc
-EXEC=string_demo
+EXEC=goAnagram
 OPT=-O2
 CFLAGS=-Wall -std=c99 -o
 
 all: $(EXEC)
 
-$(EXEC): string_demo.o string.o array.o dictionary.o joker.o
+$(EXEC): $(EXEC).o string.o array.o dictionary.o joker.o
 	$(CC) $(OPT) $(CFLAGS) $@ $^
 
-string_demo.o: string_demo.c string.h
+$(EXEC).o: $(EXEC).c string.h
 	$(CC) $(OPT) -c -g $(CFLAGS) $@ $<
 
 string.o: string.c string.h

@@ -48,7 +48,7 @@ int main(int argc, char *argv[]){
 		long t2 = (e.tv_sec - b.tv_sec) * 1000000 + (e.tv_usec - b.tv_usec);
 		word_array_print(&res2);
 		printf("\nArray:\n%zu word(s) in %ld micro s", res1.size, t1);
-		printf("\nDictionary:\n%zu word(s) in %ld micro s\n", res2.size, t2);
+		printf("\nHash table:\n%zu word(s) in %ld micro s\n", res2.size, t2);
 		word_array_destroy(&res1);
 		word_array_destroy(&res2);
 	}
